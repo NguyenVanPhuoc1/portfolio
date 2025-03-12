@@ -1,0 +1,9 @@
+.bg-dark {
+    background-image: url('../herobg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw; 
+    margin: 0; /* Xóa margin mặc định */
+    background-attachment: fixed;
+}
