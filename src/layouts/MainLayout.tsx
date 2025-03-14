@@ -1,6 +1,7 @@
 import Header from "../components/header/Header";
 import Main from "../components/main/Main";
 import Footer from "../components/footer/Footer";
+import BackToTop from "../components/footer/BackToTop";
 import '../assets/css/main.css';
 
 interface LayoutProps {
@@ -16,6 +17,7 @@ const MainLayout: React.FC<LayoutProps> = ({ setIsDark, isDark }) => {
                     <Header isChecked={isDark} handleChange={() => setIsDark((prev) => !prev)}  />
                     <Main />
                     <Footer />
+                    <BackToTop />
                 </div>
             </div>
         </div>
