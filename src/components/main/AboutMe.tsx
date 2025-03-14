@@ -40,9 +40,10 @@ export default function AboutMe() {
                             />
                         </div>
                     </div>
-                    <p className="mt-4 text-gray-700 text-justify" data-aos="fade-up">I am a Front-end Developer with experience in ReactJs and Vue.js, alongside 6 months of backend development 
-                        using Laravel and Node.js. My ambition is to enhance user experience, optimize performance, and improve page load speed while building scalable and efficient applications.
-                        I have hands-on experience working with MySQL and MongoDB, integrating APIs, and managing data effectively
+                    <p className="mt-4 text-gray-700 text-justify" data-aos="fade-up">I am a Fullstack Developer with 6th months experience in React.js and Vue.js for front-end development, 
+                        combined with experience in Laravel and Node.js for back-end development. I specialize in building scalable,
+                        efficient, and high-performance applications with a strong focus on optimizing user experience and page load speed.
+                        I have hands-on experience working with MySQL and MongoDB, integrating APIs, and managing data effectively.
                         I'm excited about new opportunities and challenges where i can leverage my skill and 
                         learn from experience from colleagues in the industry, you can contact me at nguyenvanphuoc031123@gmail.com 🎉</p>
                 </div>
