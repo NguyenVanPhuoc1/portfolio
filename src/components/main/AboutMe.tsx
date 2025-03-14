@@ -12,12 +12,12 @@ export default function AboutMe() {
     // Chuyển đổi scrollY thành góc xoay
     // const rotateY = useTransform(scrollYProgress, [0, 1], [-90, 90]);
     return (
-        <section className=" about-me lg:m-24 h-auto" id='about'>
+        <section className=" about-me m-15 md:m-24 h-auto" id='about'>
             <div className="about-title text-center text-gray-700 text-3xl font-bold pb-6">
                 About Me
             </div>
             <div className="grid grid-cols-1 md:grid-cols-[4fr_3fr] gap-0 h-full">
-                <div className=" px-15 py-4 rounded-2xl">
+                <div className=" md:px-15 py-4 rounded-2xl">
                     <div className="flex">
                         <div className='font-bold ' style={{fontSize: '25px'}}>
                             Hi, 
@@ -47,7 +47,7 @@ export default function AboutMe() {
                         learn from experience from colleagues in the industry, you can contact me at nguyenvanphuoc031123@gmail.com 🎉</p>
                 </div>
                 {/* load 3d three js */}
-                <motion.div className='px-15 py-4'>
+                <motion.div className='sm:px-15 sm:py-4'>
                     <ComputerCanvas />
                 </motion.div>
             </div>
