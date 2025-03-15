@@ -37,5 +37,14 @@ export const Projects: ProjectItem[] = [
         tech: "Vue.js, MongoDB, Laravel, Ant Design Vue",
         link_git: "https://github.com/NguyenVanPhuoc1/booking_vehicle",
         link_demo: "https://booking-vehicle-hibw.vercel.app/"
+    },
+    {
+        id: "multi_auth_login",
+        name: "Multi Auth Login",
+        desc: "Multi Auth Login with Laravel Permission.",
+        image: "../projects/image4.png",
+        tech: "Laravel, Mysql",
+        link_git: "https://github.com/NguyenVanPhuoc1/login_laravel",
+        link_demo: "#"
     }
 ];

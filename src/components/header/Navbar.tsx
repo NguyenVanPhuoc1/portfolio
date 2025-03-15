@@ -31,9 +31,11 @@ const Navbar = () => {
     );
     return (
         <nav className={`flex items-center py-2 top-0 z-20 `}> 
-            <Button onClick={toggleDrawer(true)}>
-                <Hamburger toggled={open} size={20} toggle={setOpen} />
-            </Button>
+            <div className="block sm:hidden">
+                <Button onClick={toggleDrawer(true)}>
+                    <Hamburger toggled={open} size={20} toggle={setOpen} />
+                </Button>
+            </div>
             <Drawer open={open} onClose={toggleDrawer(false)}>
                 {DrawerList}
             </Drawer>
