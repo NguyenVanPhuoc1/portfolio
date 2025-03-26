@@ -9,7 +9,7 @@ export default function Contact() {
                 Contact
             </div>
             <div className="block sm:flex justify-between sm:px-15 py-5 font-bold text-sm text-center">
-                <Link to="../cv/Cv-Fresher.pdf" target="_blank" download className="inline-flex items-center cursor-pointer p-3 bg-sky-600 underline ">
+                <Link to="../cv/vanphuoc-cv.pdf" target="_blank" download className="inline-flex items-center cursor-pointer p-3 bg-sky-600 underline ">
                     <div className="icon"> < GoDownload /></div>
                     <button className="cursor-pointer" >Download CV</button>
                 </Link>
