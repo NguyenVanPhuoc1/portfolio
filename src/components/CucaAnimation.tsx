@@ -48,8 +48,10 @@ const CucaAnimation = () => {
             const currentRotation = rotationRef.current;
             if (currentRotation) {
                 this.targets().forEach((cuca ) => {
-                    const current = gsap.getProperty(cuca, "rotation") as number;
-                    gsap.set(cuca, {
+                    const target = cuca as HTMLElement;
+                    const current = gsap.getProperty(target, "rotation") as number;
+
+                    gsap.set(target, {
                         rotation: current + currentRotation,
                     });
                 });
