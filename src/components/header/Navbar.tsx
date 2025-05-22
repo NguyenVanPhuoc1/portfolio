@@ -7,8 +7,11 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 import {navLinks, NavLink} from './constants';  
 import logo from "../../assets/NVP.gif";
 import { Squash as Hamburger } from "hamburger-react";
+import SkeletonLoading from "../SkeletonLoading";
+import { useLoading } from '../../LoadingContext';
 
 const Navbar = () => {
+    const loading = useLoading();
     const [open, setOpen] = useState(false);
 
     const toggleDrawer = (newOpen: boolean) => () => {
@@ -29,7 +32,31 @@ const Navbar = () => {
             </ul>   
         </Box>
     );
-    return (
+    return loading ? (
+        <nav className={`flex items-center py-2 top-0 z-20 `}> 
+            {/* mobile */}
+            <div className="block sm:hidden">
+                <SkeletonLoading className="!w-[20px] !h-[20px] object-contain"/>
+            </div>
+            {/* desktop */}
+            <div className="w-full xl max-w-7xl flex justify-between items-center">
+                <div className="flex items-center gap-2 m-6" >
+                    <SkeletonLoading className="!w-[36px] !h-[36px] object-contain"/>
+                </div>
+                <p className='mx-4 font-bold'>
+                    <SkeletonLoading className="!w-[55px] !h-[24px]"/>
+                </p>
+                <ul className={`hidden sm:flex list-none sm:flex-row gap-5`}>
+                {navLinks.map((link: NavLink) => (
+                    <li key={link.id} className=" hover:text-gray-400 items-center flex w-full justify-center">
+                        <SkeletonLoading className="!w-[60px] !h-[24px]group relative"/>
+                    </li>
+                ))}
+                </ul>   
+            </div>
+        </nav>
+    ):
+    (
         <nav className={`flex items-center py-2 top-0 z-20 `}> 
             <div className="block sm:hidden">
                 <Button onClick={toggleDrawer(true)}>

@@ -5,7 +5,7 @@ import { OrbitControls, useGLTF } from "@react-three/drei";
 // Component để load mô hình 3D
 const Model: React.FC = () => {
     const model = useGLTF("/desktop_pc/computer-desk-area/scene.gltf"); // Đặt file .glb vào thư mục /public/models
-
+    // const model = useGLTF("/earth/scene.gltf"); // Đặt file .glb vào thư mục /public/models
     return <primitive object={model.scene} scale={1.7} />;
 };
 

@@ -1,4 +1,8 @@
 .bg-dark {
+    background-color: #f0f0f0;
+}
+
+.bg-dark.loaded{
     background-image: url('../herobg.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -6,4 +10,10 @@
     width: 100vw; 
     margin: 0; /* Xóa margin mặc định */
     background-attachment: fixed;
+}
+
+#theCucas{
+    position:absolute;
+    top:0;
+    left:0;
 }
