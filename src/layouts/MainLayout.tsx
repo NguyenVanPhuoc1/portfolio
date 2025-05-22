@@ -21,7 +21,7 @@ const MainLayout: React.FC<LayoutProps> = ({ setIsDark, isDark }) => {
                         isChecked={isDark}
                         handleChange={() => setIsDark((prev) => !prev)}
                     />
-                    <CucaAnimation />
+{/*                     <CucaAnimation /> */}
                     <Main />
                     <Footer />
                     {
