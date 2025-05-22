@@ -1,7 +1,23 @@
-
+import SkeletonLoading from "../SkeletonLoading";
+import { useLoading } from '../../LoadingContext';
 
 export default function Footer() {
-    return (
+    const loading = useLoading();
+
+    return loading ? (
+        <footer className="bg-gradient-to-t from-white to-transparent">
+            <div className="mx-auto w-full max-w-screen-xl">
+                <div className="px-4 py-6 md:flex md:items-center md:justify-between">
+                    <span className="text-sm font-bold dark:text-gray-300 sm:text-center">
+                        <SkeletonLoading className="!w-[350px] h-full "/>
+                    </span>
+                    <div className="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
+                        <SkeletonLoading className="!w-[350px] h-full "/>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    ) : (
         <footer className="bg-gradient-to-t from-white to-transparent">
             <div className="mx-auto w-full max-w-screen-xl">
                 <div className="px-4 py-6 md:flex md:items-center md:justify-between">

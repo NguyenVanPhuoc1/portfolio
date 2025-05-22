@@ -1,17 +1,41 @@
 import { TypeAnimation } from 'react-type-animation';
 import {useState} from 'react';
 import {motion} from 'framer-motion';
-// import { motion, useScroll, useTransform } from "framer-motion";
 import ComputerCanvas from './3DTest';
+import SkeletonLoading from "../SkeletonLoading";
+import { useLoading } from '../../LoadingContext';
 
 export default function AboutMe() {
 
+    const loading = useLoading();
     const [textColor, setTextColor] = useState('red');
-    // const { scrollYProgress } = useScroll();
-
-    // Chuyển đổi scrollY thành góc xoay
-    // const rotateY = useTransform(scrollYProgress, [0, 1], [-90, 90]);
-    return (
+    
+    return loading ? (
+        <section className=" about-me m-15 md:m-24 h-auto" id='about'>
+            <div className="about-title justify-items-center text-gray-700 text-3xl font-bold pb-6">
+                <SkeletonLoading className="!w-[150px] h-full "/>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-[4fr_3fr] gap-0 h-full">
+                <div className=" md:px-15 py-4 rounded-2xl">
+                    <div className="flex">
+                        <div className='font-bold ' style={{fontSize: '25px'}}>
+                            <SkeletonLoading className="w-full h-full "/>
+                        </div>
+                        <div className='font-bold italic mx-2' style={{fontSize: '25px',color: textColor}}>
+                            <SkeletonLoading className="!w-[300px] h-full "/>
+                        </div>
+                    </div>
+                    <p className="mt-4 text-gray-700 text-justify w-full h-full" data-aos="fade-up">                
+                        <SkeletonLoading className="w-full h-[80px] sm:h-[100px] md:h-[120px] lg:h-[160px] "/>
+                    </p>
+                </div>
+                {/* load 3d three js */}
+                <motion.div className='sm:px-15 sm:py-4'>
+                    <SkeletonLoading className="w-full h-[80px] sm:h-[100px] md:h-[120px] lg:h-[230px]  "/>
+                </motion.div>
+            </div>
+        </section>
+    ):(
         <section className=" about-me m-15 md:m-24 h-auto" id='about'>
             <div className="about-title text-center text-gray-700 text-3xl font-bold pb-6">
                 About Me

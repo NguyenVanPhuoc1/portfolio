@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Toggle } from './Toggle';
+import  Toggle  from './Toggle';
 import Navbar from './Navbar';
 
 interface HeaderProps{

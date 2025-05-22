@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 // import LoadingSphere from "./components/LoadingSphere"; // Import component đã tạo
 // import  DotLottieLoading  from "./components/DotLottieLoading";
-import ParticleSphere from './components/ParticleSphere';
+// import ParticleSphere from './components/ParticleSphere';
 import MainLayout from "./layouts/MainLayout";
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
+import LoadingProvider from "./LoadingContext";
 
 export default function App() {
   const [isDark, setIsDark] = useState<boolean>(true);
@@ -25,13 +26,17 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline /> {/* Tự động đổi màu nền theo theme */}
-      <div className=" h-full w-screen dark:bg-gray-900 ">
-        {loading ? (
-          <ParticleSphere />
-        ) : (
-          <MainLayout isDark={isDark} setIsDark={setIsDark} />
-        )}
-      </div> 
+      <LoadingProvider value={loading}>
+        <div className=" h-full w-screen dark:bg-gray-900 ">
+            <MainLayout isDark={isDark} setIsDark={setIsDark} />
+
+          {/* {loading ? (
+            <ParticleSphere />
+          ) : (
+            <MainLayout isDark={isDark} setIsDark={setIsDark} />
+          )} */}
+        </div> 
+      </LoadingProvider>
     </ThemeProvider>
   );
 }
