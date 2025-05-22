@@ -2,7 +2,7 @@ import Header from "../components/header/Header";
 import Main from "../components/main/Main";
 import Footer from "../components/footer/Footer";
 import BackToTop from "../components/footer/BackToTop";
-import CucaAnimation from "../components/CucaAnimation";
+// import CucaAnimation from "../components/CucaAnimation";
 import { useLoading } from "../LoadingContext";
 import "../assets/css/main.css";
 
